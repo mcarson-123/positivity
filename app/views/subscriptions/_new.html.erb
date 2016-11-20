@@ -1,0 +1,13 @@
+<div class="new-subscription">
+<%= form_for @subscription do |sub_form| %>
+  <div class="new-subscription-form-field">
+    <%= sub_form.text_field :name, placeholder: "name" %>
+  </div>
+  <div class="new-subscription-form-field">
+    <%= sub_form.telephone_field :phone_number, placeholder: "xxx-xxx-xxxx" %>
+  </div>
+  <div class="new-subscription-form-field">
+    <%= sub_form.submit "Let's do it!" %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.positivity-application {
+  height: 100%;
+  width: 100%;
+  background-image: url('imagine2.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 1200px auto;
+/*  background-color: #FCF5F5;
+  color: #8C1717;*/
+
+  font-family: "Bakersville";
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.h2 {
+  padding: 0 10px;
+}
+.h3 {
+
+}
+
+.welcome-page {
+  position: relative;
+  top: 280px;
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-subscription {
+  position: relative;
+  top: 20px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-subscription-form-field {
+  margin: 10px auto;
+}
+
+input:focus {
+    outline:none;
+}
+
+.new-subscription-form-field input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.new-subscription-form-field input[type=submit] {
+  border: none;
+  margin-left: 0;
+  margin-top: 20px;
+  border-radius: 2px
+}
