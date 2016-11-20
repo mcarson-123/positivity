@@ -47,7 +47,7 @@
 .new-subscription {
   position: relative;
   top: 20px;
-  width: 150px;
+  width: 180px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -77,4 +77,32 @@ input:focus {
   margin-left: 0;
   margin-top: 20px;
   border-radius: 2px
+}
+
+.new-subscription-form-field input#subscription_name {
+  width: 100%;
+}
+
+.new-subscription-telephone-input {
+  height: 30px;
+  margin-top: 20px
+}
+
+.new-subscription-telephone-input p#plus{
+  width: 10px;
+  float: left;
+  margin: 0;
+}
+
+.new-subscription-telephone-input input#subscription_phone_number_country_code{
+  width: 20px;
+  float: left;
+  margin: 0 2px;
+}
+
+.new-subscription-telephone-input input#subscription_phone_number{
+  width: 138px;
+  float: left;
+  margin: 0 4px;
+  margin-right: 0;
 }

@@ -12,7 +12,7 @@ class SubscriptionsController < ApplicationController
   private
 
   def create_subscription_params
-    params.require(:subscription).permit(:name, :phone_number)
+    params.require(:subscription).permit(:name, :phone_number, :phone_number_country_code)
   end
 
 end

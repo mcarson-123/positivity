@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   root "welcome#welcome"
 
   resources :subscriptions
+
+  post "confirm" => "confirmations#confirm"
 end

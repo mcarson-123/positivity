@@ -12,6 +12,9 @@
 
 class Subscription < ActiveRecord::Base
 
+  # Attr reader used in simple form new subscription
+  attr_reader :phone_number_country_code
+
   #---------------------------------------------------------
   # Enums
   #---------------------------------------------------------
