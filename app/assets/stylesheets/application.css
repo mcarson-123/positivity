@@ -53,6 +53,15 @@
   margin-right: auto;
 }
 
+.subscription-success {
+  position: relative;
+  top: 280px;
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .new-subscription-form-field {
   margin: 10px auto;
 }

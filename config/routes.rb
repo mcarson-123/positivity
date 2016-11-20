@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   root "welcome#welcome"
 
-  resources :subscriptions
+  resources :subscriptions, only: [:new, :create]
 
   post "confirm" => "confirmations#confirm"
+
+  get "success" => "subscriptions#success"
 end
