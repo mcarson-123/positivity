@@ -25,17 +25,17 @@ class Subscription < ActiveRecord::Base
   # Enums
   #---------------------------------------------------------
 
-  enum frequency: [:daily, :weekly]
-  enum activation_state: [:created, :active, :inactive]
+  enum frequency: Subscription::Frequency::OPTIONS
+  enum activation_state: Subscription::ActivationState::OPTIONS
 
 
   #---------------------------------------------------------
   # Scopes
   #---------------------------------------------------------
 
-  scope :active, -> { where(activation_state: 1) }
-  scope :daily, -> { where(frequency: 0) }
-  scope :weekly, -> { where(frequency: 1) }
+  scope :active, -> { where(activation_state: Subscription::ActivationState::ACTIVE) }
+  scope :daily, -> { where(frequency: Subscription::Frequency::DAILY) }
+  scope :weekly, -> { where(frequency: Subscription::Frequency::WEEKLY) }
 
   #-----------------------------------------------------------------------------
   # Instance Methods

@@ -22,6 +22,6 @@ class PositiveMessage < ActiveRecord::Base
   # Scopes
   #---------------------------------------------------------
 
-  scope :active, -> { where(activation_state: 0) }
+  scope :active, -> { where(enabled_state: PositiveMessage::EnabledState::OPTIONS) }
 
 end
