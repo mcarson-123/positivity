@@ -11,18 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161119185416) do
+ActiveRecord::Schema.define(version: 20170121033110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "positive_messages", force: :cascade do |t|
+    t.string   "message_text"
+    t.integer  "enabled_state"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "subscriptions", force: :cascade do |t|
     t.string   "name"
     t.string   "phone_number"
     t.integer  "frequency"
     t.integer  "activation_state", default: 0
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "message_queue",    default: [],              array: true
   end
 
 end

@@ -3,11 +3,13 @@
 # Table name: subscriptions
 #
 #  id               :integer          not null, primary key
+#  name             :string
 #  phone_number     :string
 #  frequency        :integer
-#  activation_state :integer
+#  activation_state :integer          default(0)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  message_queue    :integer          default([]), is an Array
 #
 
 require 'rails_helper'

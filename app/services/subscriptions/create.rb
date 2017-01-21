@@ -5,11 +5,14 @@ module Subscriptions
 
     def call(params)
       params = coerce_params_for_phone_number(params)
-      sub = Subscription.create(params)
+      subscription = Subscription.create(params.merge(frequency: :daily))
+
+      ReplenishMessageQueueJob.perform_async(subscription)
+
       # Send confirmation text
       TwilioClient.messages.create(
         from: ENV.fetch("TWILIO_PHONE_NUMBER"),
-        to: sub.phone_number,
+        to: subscription.phone_number,
         body: %(Thanks for signing up! Reply "confirm" to start your positive messages)
       )
     end
