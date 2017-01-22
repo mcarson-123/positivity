@@ -2,9 +2,8 @@ class ConfirmationsController < ApplicationController
   before_action :ensure_twilio_sender, only: :confirm
 
   def confirm
-    @subscription = Subscriptions::Confirm.call(params)
-
-    if @subscription.try(:active?)
+    @subscriptions = Subscriptions::Confirm.call(params)
+    if @subscriptions.any? { |subscription| subscription.active? }
       twiml = Twilio::TwiML::Response.new do |r|
         r.Message "Thanks for confirming, positive messages are coming your way soon..."
       end
