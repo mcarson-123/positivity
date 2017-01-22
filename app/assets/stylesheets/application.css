@@ -35,7 +35,7 @@
 
 }
 
-.welcome-page {
+.main-page {
   position: relative;
   top: 280px;
   width: 400px;
@@ -44,7 +44,7 @@
   margin-right: auto;
 }
 
-.new-subscription {
+.new-subscription, .subscription-update {
   position: relative;
   top: 20px;
   width: 180px;
