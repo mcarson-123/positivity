@@ -1,0 +1,19 @@
+<div class="main-page">
+  <div class="subscription-update">
+    <%= form_for :subscription, url: "subscriptions/unsubscribe", method: :put do |sub_form| %>
+    <!-- <div class="new-subscription-form-field">
+      <%= sub_form.text_field :name, placeholder: "your name" %>
+    </div> -->
+    <div class="new-subscription-form-field">
+      <div class="new-subscription-telephone-input">
+        <p id="plus">+</p>
+        <%= sub_form.text_field :phone_number_country_code, value: "01" %>
+        <%= sub_form.telephone_field :phone_number, placeholder: "XXX-XXX-XXXX" %>
+      </div>
+    </div>
+    <div class="new-subscription-form-field">
+      <%= sub_form.submit "Unsubscribe" %>
+    </div>
+  <% end %>
+  </div>
+</div>

@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   post "confirm" => "confirmations#confirm"
 
   get "success" => "subscriptions#success"
+  get "unsubscribed" => "subscriptions#unsubscribed"
+  get "edit" => "subscriptions#edit"
+  put "subscriptions/unsubscribe" =>"subscriptions#unsubscribe"
 end
