@@ -1,4 +1,4 @@
-class Subscription
+class PositiveMessage
   module EnabledState
     ENABLED = 0
     DISABLED = 1
