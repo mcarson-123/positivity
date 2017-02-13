@@ -1,3 +1,6 @@
+
+@import "bootstrap";
+@import "bootstrap-responsive";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -16,17 +19,38 @@
 .positivity-application {
   height: 100%;
   width: 100%;
-  background-image: url('imagine2.png');
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 1200px auto;
-/*  background-color: #FCF5F5;
-  color: #8C1717;*/
-
+  background-image: url('Peas.png');
+  background-repeat: repeat;
   font-family: "Bakersville";
   font-weight: normal;
   font-size: 16px;
 }
+
+.title-banner {
+  background-image: url('imagine_whirled_peas_banner.png');
+  background-repeat: no-repeat;
+  max-width: 800px;
+  background-position: center;
+  background-size: 100%;
+  margin: auto;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .title-banner {
+    background-image: url('banner_narrow.png');
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 415px) {
+  .title-banner {
+    background-image: url('banner_narrow.png');
+    max-width: 400px;
+  }
+}
+
 
 .h2 {
   padding: 0 10px;
