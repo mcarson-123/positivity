@@ -15,13 +15,13 @@ class PositiveMessage < ActiveRecord::Base
   # Enums
   #---------------------------------------------------------
 
-  enum enabled_state: [:enabled, :disabled]
+  enum enabled_state: PositiveMessage::EnabledState::OPTIONS
 
 
   #---------------------------------------------------------
   # Scopes
   #---------------------------------------------------------
 
-  scope :active, -> { where(enabled_state: PositiveMessage::EnabledState::OPTIONS) }
+  scope :active, -> { where(enabled_state: PositiveMessage::EnabledState::ENABLED) }
 
 end
