@@ -5,7 +5,8 @@ module Subscriptions
 
     def call(params)
       params = Subscriptions::CoercePhoneNumberParams.call(params)
-      subscription = Subscription.create(params.merge(frequency: :daily))
+      subscription = Subscription.find_or_create_by(phone_number: params[:phone_number])
+      subscription.update(params.except(:phone_number).merge(frequency: :daily))
 
       ReplenishMessageQueueJob.perform_async(subscription)
 

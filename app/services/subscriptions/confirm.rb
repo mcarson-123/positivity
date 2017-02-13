@@ -8,9 +8,10 @@ module Subscriptions
       return unless body.strip.downcase == "confirm"
 
       from_phone_number = twilio_response_params["From"]
-      subscriptions = Subscription.where(phone_number: from_phone_number)
-      subscriptions.update_all(activation_state: Subscription::ActivationState::ACTIVE)
-      subscriptions
+      # Only confirm most recent if there are multiple
+      subscription = Subscription.where(phone_number: from_phone_number).last
+      subscription.update(activation_state: Subscription::ActivationState::ACTIVE)
+      subscription
     end
 
   end
