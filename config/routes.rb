@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :subscriptions, only: [:new, :create]
 
-  post "confirm" => "confirmations#confirm"
+  post "twilio" => "twilio#incoming_message"
 
   get "success" => "subscriptions#success"
   get "unsubscribed" => "subscriptions#unsubscribed"

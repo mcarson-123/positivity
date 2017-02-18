@@ -13,7 +13,7 @@ class SubscriptionsController < ApplicationController
   end
 
   def unsubscribe
-    @subscription = Subscriptions::Unsubscribe.call(subscription_params)
+    @subscriptions = Subscriptions::Unsubscribe.call(subscription_params)
     redirect_to "/unsubscribed"
   end
 
