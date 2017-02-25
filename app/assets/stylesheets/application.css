@@ -41,7 +41,7 @@
   position: relative;
   top: 200px;
   width: 500px;
-  height: 200px;
+  height: 260px;
   background-color: white;
   border-radius: 20px;
   border-style: solid;
@@ -74,7 +74,7 @@
 
   .main-content {
     max-width: 300px;
-    height: 300px;
+    height: 340px;
   }
 }
 
@@ -96,8 +96,10 @@ h2 {
   padding: 0 10px;
   font-size: 1.5rem;
 }
-.h3 {
-
+h3 {
+  padding: 0 10px;
+  font-size: 1.1rem;
+  font-weight: normal;
 }
 
 .main-page-content {

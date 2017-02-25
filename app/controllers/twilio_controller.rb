@@ -8,7 +8,9 @@ class TwilioController < ApplicationController
       @subscription = Subscriptions::Confirm.call(params)
       if @subscription.try(:active?)
         respond = true
-        message = "Thanks for confirming, positive messages are coming your way soon..."
+        message = \
+        %(Thanks for confirming, positive messages are coming your way soon...
+Text STOP to unsubscribe.)
       end
     when "stop"
       @subscriptions = Subscriptions::Unsubscribe.call(params, from_twilio: true)
