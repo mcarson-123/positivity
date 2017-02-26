@@ -7,7 +7,7 @@ module PositiveMessages
     # The file should include one message per line.
     # Easiest to add new messages to the beginnging of the file and
     # pass end_line arg as the line number of the last new line to include
-
+    # PositiveMessages::AddMessagesFromFile.call(file_name: "./app/messages.txt", end_line: 24)
 
     extend self
 
