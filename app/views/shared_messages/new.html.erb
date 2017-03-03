@@ -1,0 +1,40 @@
+<div class="main-page-content">
+
+  <h2>
+    Share a positive message via SMS
+  </h2>
+
+  <%= form_for @shared_message do |message_form| %>
+    <div class="new-shared-message-form">
+      <div class="new-shared-message-form-input">
+        <%= message_form.label :sender_name, "Your name" %>
+        <%= message_form.text_field :sender_name %>
+      </div>
+      <div class="new-shared-message-form-input">
+        <p id="shared-message-recipient-label">Recipient phone number</p>
+        <div class="phone-number-input">
+          <p id="plus">+</p>
+          <%= message_form.text_field :phone_number_country_code, value: "01", id: "phone_number_country_code" %>
+          <%= message_form.telephone_field :phone_number, placeholder: "XXX-XXX-XXXX", id: "phone_number" %>
+        </div>
+      </div>
+      <div class="new-shared-message-form-input">
+        <% @positive_messages.each do |positive_message| %>
+        <div>
+          <%= message_form.label :positive_message do %>
+            <div class="new-shared-message-form-message-option">
+              <%= message_form.radio_button :positive_message_id, positive_message.id %>
+              <div class="shared-message-text">
+                <%= positive_message.message_text %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      </div>
+      <div class="new-positive-message-form-field">
+        <%= message_form.submit "Share" %>
+      </div>
+    </div>
+  <% end %>
+</div>

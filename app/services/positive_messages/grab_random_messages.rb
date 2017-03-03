@@ -11,7 +11,7 @@ module PositiveMessages
       end
 
       # Use inject to ensude we don't want duplicated
-      (0...7).to_a.inject([]) { |memo, _| memo << grab_random_message_id(memo) }
+      (0...count).to_a.inject([]) { |memo, _| memo << grab_random_message_id(memo) }
     end
 
     private

@@ -1,0 +1,28 @@
+<div class="main-page-content">
+
+  <h2>
+    Subscribe to receive positivity via SMS
+  </h2>
+  <h3>
+    A positive text message will be sent daily to your phone. Text STOP at
+    any time to opt out.
+  </h3>
+
+  <div class="new-subscription">
+  <%= form_for @subscription do |sub_form| %>
+    <!-- <div class="new-subscription-form-field">
+      <%= sub_form.text_field :name, placeholder: "your name" %>
+    </div> -->
+    <div class="new-subscription-form-field">
+      <div class="new-subscription-telephone-input">
+        <p id="plus">+</p>
+        <%= sub_form.text_field :phone_number_country_code, value: "01" %>
+        <%= sub_form.telephone_field :phone_number, placeholder: "XXX-XXX-XXXX" %>
+      </div>
+    </div>
+    <div class="new-subscription-form-field">
+      <%= sub_form.submit "Let's do it!" %>
+    </div>
+  <% end %>
+  </div>
+</div>

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root "welcome#welcome"
 
   resources :subscriptions, only: [:new, :create]
+  resources :shared_messages, only: [:new, :create]
+  get "share_success" => "shared_messages#share_success"
 
   post "twilio" => "twilio#incoming_message"
 

@@ -3,7 +3,7 @@
 # Table name: positive_messages
 #
 #  id            :integer          not null, primary key
-#  messages      :string
+#  message_text  :string
 #  enabled_state :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null

@@ -23,6 +23,8 @@
   font-family: "Bakersville";
   font-weight: normal;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title-banner {
@@ -30,27 +32,50 @@
   background-repeat: no-repeat;
   max-width: 800px;
   max-height: 200px;
+  height: 200px;
+  width: 100%;
   background-position: center;
   background-size: 100%;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
-.main-content {
+.application-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-page-link-content {
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #99D3A4;
+  padding: 30px;
+  max-width: 420px;
+  background: white;
+  margin: 15px;
+  font-size: 20px;
+}
+
+.main-page-content {
   display: flex;
   position: relative;
-  top: 200px;
+  top: 20px;
   width: 500px;
-  height: 260px;
+  /*height: 260px;*/
+  height: 100%;
   background-color: white;
   border-radius: 20px;
   border-style: solid;
   border-width: 4px;
-  /*border-color: #63BC74;*/
   border-color: #99D3A4;
   margin: auto;
   padding: 40px;
   align-items: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
 }
 
 @media (max-width: 855px) {
@@ -102,14 +127,10 @@ h3 {
   font-weight: normal;
 }
 
-.main-page-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+a {
+    text-decoration: none;
+    color: black;
+  }
 
 .new-subscription, .subscription-update {
   position: relative;
@@ -142,22 +163,28 @@ input:focus {
     outline:none;
 }
 
+input {
+    outline:none;
+    display: block;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
 .new-subscription-form-field input {
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  border-top: none;
-  border-left: none;
-  border-right: none;
   margin-top: 20px;
   font-size: 18px;
 }
 
-.new-subscription-form-field input[type=submit] {
+input[type=submit] {
   border: none;
   margin-right: 0;
   margin-top: 0;
-  border-radius: 2px
+  border-radius: 2px;
+  font-size: 16px;
+  float: right;
 }
 
 .new-subscription-form-field-submit {
@@ -173,10 +200,25 @@ input:focus {
   margin-top: 20px
 }
 
-.new-subscription-telephone-input p#plus{
+#plus {
   width: 10px;
   float: left;
   margin: 0;
+}
+
+#phone_number_country_code{
+  width: 20px;
+  float: left;
+  margin: 0 2px;
+  font-size: 16px;
+}
+
+#phone_number{
+  width: 138px;
+  float: left;
+  margin: 0 4px;
+  margin-right: 0;
+  font-size: 16px;
 }
 
 .new-subscription-telephone-input input#subscription_phone_number_country_code{
@@ -190,4 +232,43 @@ input:focus {
   float: left;
   margin: 0 4px;
   margin-right: 0;
+}
+
+.phone-number-input {
+  display: flex;
+  height: 100%;
+}
+
+.new-shared-message-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-shared-message-form-input {
+  max-width: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.new-shared-message-form-message-option {
+  display: flex;
+  padding-top: 10px;
+}
+
+.shared-message-text {
+  padding-left: 10px;
+}
+
+#shared-message-recipient-label {
+  margin-bottom: 10px;
+}
+
+#shared_message_sender_name {
+  font-size: 16px;
+}
+
+input[type=radio] {
+  height: 20px;
+  width: 20px;
+  margin: 0;
 }

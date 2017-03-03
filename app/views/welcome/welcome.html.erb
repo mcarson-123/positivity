@@ -1,11 +1,6 @@
-<div class="main-page-content">
-
-<h2>
-  Subscribe to receive positivity via SMS
-</h2>
-<h3>
-  A positive text message will be sent daily to your phone. Text STOP at
-  any time to opt out.
-</h3>
-<%= render partial:"subscriptions/new"%>
+<div class="main-page-link-content">
+  <%= link_to "Subscribe to receive daily positive SMS messages", new_subscription_path %>
+</div>
+<div class="main-page-link-content">
+  <%= link_to "Share a positive SMS message", new_shared_message_path %>
 </div>
