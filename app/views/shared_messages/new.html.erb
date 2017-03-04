@@ -8,12 +8,12 @@
 
   <%= form_for @shared_message do |message_form| %>
     <div class="new-shared-message-form">
-      <div class="new-shared-message-form-input">
-        <%= message_form.label :sender_name, "Your name" %>
+      <div class="new-shared-message-form-input shared-message-form-fields-input">
+        <%= message_form.label :sender_name, "Your name", id: "shared-message-input-label" %>
         <%= message_form.text_field :sender_name %>
       </div>
-      <div class="new-shared-message-form-input">
-        <p id="shared-message-recipient-label">Recipient</p>
+      <div class="new-shared-message-form-input shared-message-form-fields-input">
+        <p id="shared-message-input-label">Recipient</p>
         <div class="phone-number-input">
           <p id="plus">+</p>
           <%= message_form.text_field :phone_number_country_code, value: "01", id: "phone_number_country_code" %>

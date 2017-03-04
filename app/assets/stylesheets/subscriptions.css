@@ -1,16 +1,3 @@
-.new-subscription-telephone-input input#subscription_phone_number_country_code{
-  width: 20px;
-  float: left;
-  margin: 0 2px;
-}
-
-.new-subscription-telephone-input input#subscription_phone_number{
-  width: 138px;
-  float: left;
-  margin: 0 4px;
-  margin-right: 0;
-}
-
 .new-subscription-form-field-submit {
   margin-right: 0;
 }
@@ -19,22 +6,14 @@
   width: 100%;
 }
 
-.new-subscription-telephone-input {
-  height: 30px;
-  margin-top: 20px
-}
-
-.new-subscription-form-field input {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  font-size: 18px;
+.new-subscription-form-field {
+  padding-bottom: 10px;
 }
 
 .subscription-unsubscribe {
   display: flex;
-    align-content: center;
-    flex-direction: column;
+  align-content: center;
+  flex-direction: column;
 }
 
 .subscription-success {
@@ -42,10 +21,6 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.new-subscription-form-field {
-  margin: 10px auto;
 }
 
 .new-subscription, .subscription-update {
@@ -56,4 +31,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.new-subscription {
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+.subscription-update {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

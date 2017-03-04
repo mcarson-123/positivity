@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "shared_messages", media: "all" %>
+<%= stylesheet_link_tag "subscriptions", media: "all" %>
 <%= stylesheet_link_tag "phone_number", media: "all" %>
 <div class="main-page-content">
 
@@ -12,9 +12,6 @@
 
   <div class="new-subscription">
   <%= form_for @subscription do |sub_form| %>
-    <!-- <div class="new-subscription-form-field">
-      <%= sub_form.text_field :name, placeholder: "your name" %>
-    </div> -->
     <div class="new-subscription-form-field">
       <div class="new-subscription-telephone-input">
         <p id="plus">+</p>

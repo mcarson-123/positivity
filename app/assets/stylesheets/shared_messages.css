@@ -9,6 +9,13 @@
   padding-bottom: 10px;
 }
 
+.shared-message-form-fields-input {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
 .new-shared-message-form-message-option {
   display: flex;
   padding-top: 10px;
@@ -18,8 +25,12 @@
   padding-left: 10px;
 }
 
-#shared-message-recipient-label {
-  margin-bottom: 10px;
+#shared-message-input-label {
+  margin: 0;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: darkgrey;
+  font-size: 14px;
 }
 
 #shared_message_sender_name {

@@ -52,10 +52,12 @@
   border-width: 4px;
   border-color: #99D3A4;
   padding: 30px;
-  max-width: 420px;
+  width: 420px;
   background: white;
   margin: 15px;
   font-size: 20px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .main-page-content {
@@ -146,10 +148,11 @@ input {
 input[type=submit] {
   border: none;
   margin-right: 0;
-  margin-top: 0;
+  margin-top: 10px;
   border-radius: 2px;
   font-size: 16px;
   float: right;
+  padding: 6px 10px;
 }
 
 input[type=radio] {
