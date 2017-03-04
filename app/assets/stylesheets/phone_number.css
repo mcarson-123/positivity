@@ -1,0 +1,25 @@
+#plus {
+  width: 10px;
+  float: left;
+  margin: 0;
+}
+
+#phone_number_country_code{
+  width: 20px;
+  float: left;
+  margin: 0 2px;
+  font-size: 16px;
+}
+
+#phone_number{
+  width: 138px;
+  float: left;
+  margin: 0 4px;
+  margin-right: 0;
+  font-size: 16px;
+}
+
+.phone-number-input {
+  display: flex;
+  height: 100%;
+}

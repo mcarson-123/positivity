@@ -1,11 +1,13 @@
+<%= stylesheet_link_tag "shared_messages", media: "all" %>
+<%= stylesheet_link_tag "phone_number", media: "all" %>
 <div class="main-page-content">
   <div class="subscription-update">
     <%= form_for :subscription, url: "subscriptions/unsubscribe", method: :put, html: { class: "subscription-unsubscribe" } do |sub_form| %>
     <div class="new-subscription-form-field">
       <div class="new-subscription-telephone-input">
         <p id="plus">+</p>
-        <%= sub_form.text_field :phone_number_country_code, value: "01" %>
-        <%= sub_form.telephone_field :phone_number, placeholder: "XXX-XXX-XXXX" %>
+        <%= sub_form.text_field :phone_number_country_code, value: "01", id: "phone_number_country_code" %>
+        <%= sub_form.telephone_field :phone_number, placeholder: "XXX-XXX-XXXX", id: "phone_number" %>
       </div>
     </div>
     <div class="new-subscription-form-field new-subscription-form-field-submit">

@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "shared_messages", media: "all" %>
+<%= stylesheet_link_tag "phone_number", media: "all" %>
 <div class="main-page-content">
 
   <h2>
@@ -11,7 +13,7 @@
         <%= message_form.text_field :sender_name %>
       </div>
       <div class="new-shared-message-form-input">
-        <p id="shared-message-recipient-label">Recipient phone number</p>
+        <p id="shared-message-recipient-label">Recipient</p>
         <div class="phone-number-input">
           <p id="plus">+</p>
           <%= message_form.text_field :phone_number_country_code, value: "01", id: "phone_number_country_code" %>

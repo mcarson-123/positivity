@@ -116,7 +116,6 @@
   }
 }
 
-
 h2 {
   padding: 0 10px;
   font-size: 1.5rem;
@@ -132,33 +131,6 @@ a {
     color: black;
   }
 
-.new-subscription, .subscription-update {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.subscription-unsubscribe {
-  display: flex;
-    align-content: center;
-    flex-direction: column;
-}
-
-.subscription-success {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.new-subscription-form-field {
-  margin: 10px auto;
-}
-
 input:focus {
     outline:none;
 }
@@ -171,13 +143,6 @@ input {
     border-right: none;
 }
 
-.new-subscription-form-field input {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  font-size: 18px;
-}
-
 input[type=submit] {
   border: none;
   margin-right: 0;
@@ -185,86 +150,6 @@ input[type=submit] {
   border-radius: 2px;
   font-size: 16px;
   float: right;
-}
-
-.new-subscription-form-field-submit {
-  margin-right: 0;
-}
-
-.new-subscription-form-field input#subscription_name {
-  width: 100%;
-}
-
-.new-subscription-telephone-input {
-  height: 30px;
-  margin-top: 20px
-}
-
-#plus {
-  width: 10px;
-  float: left;
-  margin: 0;
-}
-
-#phone_number_country_code{
-  width: 20px;
-  float: left;
-  margin: 0 2px;
-  font-size: 16px;
-}
-
-#phone_number{
-  width: 138px;
-  float: left;
-  margin: 0 4px;
-  margin-right: 0;
-  font-size: 16px;
-}
-
-.new-subscription-telephone-input input#subscription_phone_number_country_code{
-  width: 20px;
-  float: left;
-  margin: 0 2px;
-}
-
-.new-subscription-telephone-input input#subscription_phone_number{
-  width: 138px;
-  float: left;
-  margin: 0 4px;
-  margin-right: 0;
-}
-
-.phone-number-input {
-  display: flex;
-  height: 100%;
-}
-
-.new-shared-message-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.new-shared-message-form-input {
-  max-width: 400px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.new-shared-message-form-message-option {
-  display: flex;
-  padding-top: 10px;
-}
-
-.shared-message-text {
-  padding-left: 10px;
-}
-
-#shared-message-recipient-label {
-  margin-bottom: 10px;
-}
-
-#shared_message_sender_name {
-  font-size: 16px;
 }
 
 input[type=radio] {
