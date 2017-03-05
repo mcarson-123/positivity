@@ -5,14 +5,13 @@ module SharedMessages
 
     def call(params)
       params = Subscriptions::CoercePhoneNumberParams.call(params)
-      subscription = SharedMessage.create(params)
+      shared_message = SharedMessage.create(params)
 
-      # # Send confirmation text
-      # TwilioClient.messages.create(
-      #   from: ENV.fetch("TWILIO_PHONE_NUMBER"),
-      #   to: subscription.phone_number,
-      #   body: %(Thanks for signing up! Reply "confirm" to start your positive messages)
-      # )
+      TwilioClient.messages.create(
+        from: ENV.fetch("TWILIO_PHONE_NUMBER"),
+        to: shared_message.phone_number,
+        body: "From #{shared_message.sender_name}: #{shared_message.positive_message.message_text}. Visit www.imaginewhirledpeas.com to share positivity with others."
+      )
     end
   end
 end
