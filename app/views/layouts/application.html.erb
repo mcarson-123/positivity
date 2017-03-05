@@ -13,7 +13,9 @@
 <%= link_to "unsubscribe", controller: "subscriptions", action: "edit" %>
 </div>
 
-<div class="title-banner"></div>
+<%= link_to root_path do %>
+  <div class="title-banner"></div>
+<% end %>
 
 <div class="application-content">
 <%= yield %>
