@@ -1,0 +1,44 @@
+.new-subscription-form-field-submit {
+  margin-right: 0;
+}
+
+.new-subscription-form-field input#subscription_name {
+  width: 100%;
+}
+
+.new-subscription-form-field {
+  padding-bottom: 10px;
+}
+
+.subscription-unsubscribe {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.subscription-success {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-subscription, .subscription-update {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-subscription {
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+.subscription-update {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

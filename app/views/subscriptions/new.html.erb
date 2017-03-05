@@ -1,8 +1,17 @@
 <%= stylesheet_link_tag "subscriptions", media: "all" %>
 <%= stylesheet_link_tag "phone_number", media: "all" %>
 <div class="main-page-content">
-  <div class="subscription-update">
-    <%= form_for :subscription, url: "subscriptions/unsubscribe", method: :put, html: { class: "subscription-unsubscribe" } do |sub_form| %>
+
+  <h2>
+    Subscribe to receive positivity via SMS
+  </h2>
+  <h3>
+    A positive text message will be sent daily to your phone. Text STOP at
+    any time to opt out.
+  </h3>
+
+  <div class="new-subscription">
+  <%= form_for @subscription do |sub_form| %>
     <div class="new-subscription-form-field">
       <div class="new-subscription-telephone-input">
         <p id="plus">+</p>
@@ -10,8 +19,8 @@
         <%= sub_form.telephone_field :phone_number, placeholder: "XXX-XXX-XXXX", id: "phone_number" %>
       </div>
     </div>
-    <div class="new-subscription-form-field new-subscription-form-field-submit">
-      <%= sub_form.submit "Unsubscribe" %>
+    <div class="new-subscription-form-field">
+      <%= sub_form.submit "Let's do it!" %>
     </div>
   <% end %>
   </div>

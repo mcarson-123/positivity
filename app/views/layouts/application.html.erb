@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Average" rel="stylesheet">
 </head>
 <body class="positivity-application">
 
@@ -12,9 +13,11 @@
 <%= link_to "unsubscribe", controller: "subscriptions", action: "edit" %>
 </div>
 
-<div class="title-banner"/>
+<%= link_to root_path do %>
+  <div class="title-banner"></div>
+<% end %>
 
-<div class="main-content">
+<div class="application-content">
 <%= yield %>
 </div>
 
